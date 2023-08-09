@@ -7,4 +7,21 @@
 7. ```kubectl get po```
 8. ![image](https://github.com/ilove1DevOps/Jenkins-setup-minikube/assets/128630024/ebf38d98-72cc-4f3b-af87-aa746f80e666)
 9. now create the script to run the job of the jenkins.
+10.
+```
+pipeline {
+    agent any
+
+    stages {
+        stage('Run kubectl get po') {
+            steps {
+                sh 'kubectl get po'
+            }
+        }
+    }
+}
+```
+
+11. ![image](https://github.com/ilove1DevOps/Jenkins-setup-minikube/assets/128630024/637bded8-b58d-4859-bb08-b1b10d330c23)
+
  
